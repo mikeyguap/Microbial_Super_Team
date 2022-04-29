@@ -18,6 +18,8 @@ We installed qiime2 programs with a conda environment to analyze the 16s ribsoma
 We ran into this issue...
 (Just ideas so far)
 - Identifying the correct pipeline to reach results in vscode using conda environment and qiime2
+- Training Reads and Assignemnt Taxonomy using the 99% Cluster within the Qiime2
+- 
 
 
 ## Findings
