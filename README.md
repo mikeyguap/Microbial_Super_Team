@@ -11,9 +11,9 @@ Author et al. 2019 assembled the genome of ... We compared.
 
 Author et al. 2019 sequences we downloaded from ...
 
-Our files were in fastqz
+Our files were in fastqgz
 
-We installed X programs with a conda environment
+We installed qiime2 programs with a conda environment
 
 We ran our analysis on a laptop...
 
