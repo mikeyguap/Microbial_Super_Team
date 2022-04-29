@@ -23,4 +23,4 @@ We ran into this issue
 
 To add a plot from the 'figs' folder, there needs to be a line in this document that looks like this:
 
-![plot](figs/plotfile.png)
+![plot](figures/plotfile.png)
