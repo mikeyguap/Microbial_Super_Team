@@ -16,7 +16,7 @@ Our files that were obtained by ... were in fastqgz.
 We installed qiime2 programs with a conda environment to analyze the 16s ribsomal RNA sequences and create visual figures to express findings of the microbial compostions differences between the Oyster River and Great Bay. We ran our analysis on a laptop utiliing the conda environment and qiime2 programs.
 
 We ran into this issue...
-(Just ideas)
+(Just ideas so far)
 - Identifying the correct pipeline to reach results in vscode using conda environment and qiime2
 
 
