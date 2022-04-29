@@ -3,7 +3,7 @@
 
 ## Background
 
-We were interested in identifying species from two bodies of water (the Oyster River and Great Bay) and how the species' compostion in the two communites differ 
+We were interested in identifying species compostion from two bodies of water (the Oyster River and Great Bay) and how their compostion in the two communites differ. 
 
 Author et al. 2019 assembled the genome of ... We compared.
 
