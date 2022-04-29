@@ -10,7 +10,7 @@ We were interested in identifying species compostion from Oyster beds and Mud Fl
 
 Microbial samples were collectedfrom Oyster Beds and Mud Flats in the Great Bay, NH. The collected samples were sequenced and created in fastqgz and qza files for taxonomy. We Installed Qiime2 programs with a Conda environment on a laptop to analyze the 16s ribsomal RNA sequences, then created visual figures to express findings of the microbial compostions differences between Oyster Beds and Mud Flats.
 
-We ran into this issue...
+An issue that we ran into were...
 
 - Identifying the correct pipeline to reach results in vscode using conda environment and qiime2
 
