@@ -3,7 +3,7 @@
 
 ## Background
 
-  We were interested in identifying species compostion from two bodies of water (the Oyster River and Great Bay) and how their compostion in the two communites differ. 
+  We were interested in identifying species compostion from two bodies of water (Oyster River, NH and Great Bay, NH) and how their compostion in the two communites differ. 
 
 Author et al. 2019 assembled the genome of ... We compared.
 
@@ -13,7 +13,7 @@ Author et al. 2019 sequences we downloaded from ...
 
 Our files were in fastqgz
 
-We installed qiime2 programs with a conda environment
+We installed qiime2 programs with a conda environment to analyze the 16s ribsomal RNA sequences and create visual figures to express findings of the microbial compostions differences between the Oyster River and Great Bay.  
 
 We ran our analysis on a laptop...
 
