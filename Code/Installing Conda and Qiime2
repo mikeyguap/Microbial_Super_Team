@@ -25,3 +25,4 @@ conda env create -n  Microbial_Super_Team_Qiime2 --file qiime2-2022.2-py38-osx-c
 
 ## activate new environment
 conda activate Microbial_Super_Team_Qiime2
+ 
