@@ -3,9 +3,9 @@
 
 ## Background
 
- We were interested in identifying species compostion from two bodies of water (Oyster River, NH and Great Bay, NH) and how their compostion in the two communites differ. 
+We were interested in identifying species compostion from two bodies of water (Oyster River, NH and Great Bay, NH) and how their compostion in the two communites differ. 
 
-Author et al. 2019 assembled the genome of ... We compared.
+Author et al. 2019 assembled the genome of ... 
 
 ## Methods
 
