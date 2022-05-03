@@ -1,0 +1,61 @@
+# Import the fastq files into qiime
+qiime tools import \
+--type 'SampleData[PairedEndSequencesWithQuality]' \
+--input-format CasavaOneEightSingleLanePerSampleDirFmt \
+--input-path /Users/ellacaughran/gen711_lab/OneDrive_1_4-22-2022 \
+--output-path ./Imported_Reads.qza
+
+# Run Imported_Reads.qza through dada2
+qiime dada2 denoise-paired \
+--i-demultiplexed-seqs Imported_Reads.qza \
+--p-trunc-len-f 230 \
+--p-trunc-len-r 210 \
+--p-trim-left-f 19 \
+--p-trim-left-r 20 \
+--o-denoising-stats dada2_rep_set \
+--o-table dada2_table.qza \
+--o-representative-sequences dada2_rep_set.qza \
+--verbose
+
+# quality visualization plots
+qiime demux summarize --i-data Imported_Reads.qza --o-visualization quality.qzv 
+
+# Provides rarifaction table
+qiime feature-table summarize --i-table dada2_table.qza --o-visualization dada2_table.qzv
+
+# Extract reads from silva database for classification
+qiime feature-classifier extract-reads --i-sequences silva132_99.qza --p-f-primer GTGYCAGCMGCCGCGGTAA --p-r-primer CCGYCAATTYMTTTRAGTTT --p-min-length 100 --p-max-length 700 --o-reads silva-ref-seqs.qza
+
+# Train the classifier
+qiime feature-classifier fit-classifier-naive-bayes --i-reference-reads silva-ref-seqs.qza --i-reference-taxonomy majority_taxonomy_7_levels.qza --o-classifier silva_trained_classifier.qza
+
+# Taxonomy Classifying
+qiime feature-classifier classify-sklearn --i-classifier ./silva_trained_classifier.qza --i-reads ../rep-seqs.qza --o-classification silva_taxonomy.qza --p-confidence 0.7 --p-read-orientation auto
+
+# Makes Metadata File
+qiime metadata tabulate --m-input-file dns.qza --o-visualization 
+dns.qzv
+
+# Builds Phylogeny
+qiime phylogeny align-to-tree-mafft-fasttree --i-sequences ./rep-seqs.qza --o-alignment ./aligned-rep-seqs.qza --o-masked-alignment ./masked-align-rep-seqs.qza --o-tree ./unrooted-tree.qza --o-rooted-tree ./rooted-tree.qza 
+
+# Core Diversity Metrics
+qiime diversity core-metrics-phylogenetic --i-phylogeny ./rooted-tree.qza --i-table ./table.qza --p-sampling-depth 2400 --m-metadata-file ./metadata.tsv --output-dir ./core-div-metrics
+
+# Visualize Tree
+qiime tools export --input-path rooted-tree.qza --output-path ./rooted-tree.nwk
+
+# Make Taxa Barplots 
+qiime taxa barplot --i-table ./table.qza --i-taxonomy silva_taxonomy.qza --o-visualization ./silva-taxa-bar-plots.qzv
+
+
+
+
+
+
+
+
+
+
+
+
