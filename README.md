@@ -4,7 +4,7 @@
 
 ## Background
 
-We were interested in identifying species compostion from Oyster beds and Mud Flats (Great Bay, NH) and how their compostion in the two communites differ within the same body of water. 
+We were interested in identifying species compostion from Oyster Beds and Mud Flats (Great Bay, NH) and how their compostion of organisms differ within the same body of water. 
 
 ## Methods
 
