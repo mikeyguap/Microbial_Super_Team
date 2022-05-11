@@ -59,6 +59,129 @@ qiime tools export --input-path unrooted-tree.qza --output-path core-div-metrics
 
 ##rest of pipeline in R
 
+#need to install phyloseq
+> if (!require("BiocManager", quietly = TRUE))
+  +     install.packages("BiocManager")
+setwd("/Users/ellacaughran/gen711_lab")
+otu<-read.table(file = "feat_table.txt", header = TRUE)
+head(otu)
+tax<-read.table(file = "taxonomy.tsv", header = TRUE, sep = "\t")
+head(tax)
+
+#merge files
+merged_file<-merge(otu, tax, by.x = c("OTUID"), by.y = c("OTUID"))
+head(merged_file)
+
+#note: number of rows should equal your shortest file length, drops taxonomy for OTUs that don't exist in your feature table
+
+#output merged .txt file
+write.table(merged_file, file = "combined_otu_tax.txt", sep = "\t", col.names = TRUE, row.names = FALSE)
+
+'''
+Need to open the merged .txt file in excel and split into two files: one for taxonomy
+(with columns OTUID and taxonmic info) and the other file for the feature table (OTUID and abundances)
+save each of these as a .csv
+
+library(phyloseq)
+library(qiime2R)
+library(ggplot2)
+library(ape)
+library(vegan)
+library(ggpubr)
+install.packages("agricolae")
+library(agricolae)
+library(ggsignif)
+install.packages("dplyr")
+library(dplyr)
+
+
+#read in all of the data
+# make numeric data columns readable as numberic
+feat_table = read.csv("Split_feature_table.csv", sep = ",", row.names =1, check.names = FALSE)
+feat_table$MUAPs051221a1<-as.numeric(feat_table$MUAPs051221a1)
+feat_table$MUAPs051221a2<-as.numeric(feat_table$MUAPs051221a2)
+feat_table$MUAPs051221a3<-as.numeric(feat_table$MUAPs051221a3)
+feat_table$MUAPs051221b1<-as.numeric(feat_table$MUAPs051221b1)
+feat_table$MUAPs051221b2<-as.numeric(feat_table$MUAPs051221b2)
+feat_table$MUAPs051221b3<-as.numeric(feat_table$MUAPs051221b3)
+feat_table$OYAPs051221a1<-as.numeric(feat_table$OYAPs051221a1)
+feat_table$OYAPs051221a2<-as.numeric(feat_table$OYAPs051221a2)
+feat_table$OYAPs051221b1<-as.numeric(feat_table$OYAPs051221b1)
+feat_table$OYAPs051221b2<-as.numeric(feat_table$OYAPs051221b2)
+feat_table$OYAPs051221b3<-as.numeric(feat_table$OYAPs051221b3)
+
+
+feat_table = as.matrix(feat_table)
+
+
+taxonomy = read.csv("split_tax.csv", sep = ",", row.names = 1)
+taxonomy = as.matrix(taxonomy)
+
+metadata_full = read.table("metadata.tsv", sep = "\t", row.names =1, header = TRUE)
+
+phy_tree = read_tree("tree.nwk")
+
+#import as phyloseq objects
+OTU = otu_table(feat_table, taxa_are_rows = TRUE)
+TAX = tax_table(taxonomy)
+META = sample_data(metadata_full)
+#tree was already imported as phyloseq object
+
+
+#check that your OTU names are consistent across objects
+head(taxa_names(TAX))
+head(taxa_names(OTU))
+head(taxa_names(phy_tree))
+
+#make sure files have same sample names
+sample_names(OTU)
+sample_names(META)
+
+
+##now I can actually do phyloseq stuff!
+#https://joey711.github.io/phyloseq/import-data.html
+
+physeq = phyloseq(OTU, TAX, META, phy_tree)
+
+
+##doing statistical analysis on diversity and richness
+
+
+##making a dataframe with diversity results and metadata info
+richness_est<-estimate_richness(physeq, split = TRUE, measures = c("Observed", "Chao1")) ##error when doing diversity: input data must be non-negative
+richness_est_c <- tibble::rownames_to_column(richness_est, "index")
+metadata_c <- tibble::rownames_to_column(metadata_full, "index")
+rich_w_meta <- left_join(richness_est_c, metadata_c, by = "index") #now you can do stats on the diversity dataframe!
+# error with diversity, kept saying input data must be non-negative. Unsure where negative values are in the dataset
+
+#making model for species richness  
+mod <- lm(Observed~Location, data = rich_w_meta)
+anova(mod)
+mod <- lm(Chao1~Location, data = rich_w_meta)
+anova(mod)
+
+#plotting species richness by location
+p1<-ggplot(rich_w_meta, aes(x = factor(Location), y = Observed)) + 
+  geom_boxplot() +
+  ylim(10000,17500) +
+  labs(x = "Location", y = "Richness")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
