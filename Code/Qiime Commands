@@ -48,6 +48,17 @@ qiime tools export --input-path rooted-tree.qza --output-path ./rooted-tree.nwk
 # Make Taxa Barplots 
 qiime taxa barplot --i-table ./table.qza --i-taxonomy silva_taxonomy.qza --o-visualization ./silva-taxa-bar-plots.qzv
 
+##exporting files for phyloseq analysis in R
+qiime tools export --input-path rarefied_table.qza --output-path ./phyloseq/
+cd phyloseq
+biom convert -i feature-table.biom -o feat_table.txt --to-tsv
+
+qiime tools export --input-path its_classification.qza --output-path core-div-metrics/phyloseq
+
+qiime tools export --input-path unrooted-tree.qza --output-path core-div-metrics/phyloseq
+
+##rest of pipeline in R
+
 
 
 
