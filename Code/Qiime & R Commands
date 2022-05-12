@@ -59,7 +59,7 @@ qiime tools export --input-path unrooted-tree.qza --output-path core-div-metrics
 
 ##rest of pipeline in R
 
-#need to install phyloseq
+#Installing Phyloseq
 > if (!require("BiocManager", quietly = TRUE))
   +     install.packages("BiocManager")
 setwd("/Users/ellacaughran/gen711_lab")
@@ -68,13 +68,13 @@ head(otu)
 tax<-read.table(file = "taxonomy.tsv", header = TRUE, sep = "\t")
 head(tax)
 
-#merge files
+#merging files
 merged_file<-merge(otu, tax, by.x = c("OTUID"), by.y = c("OTUID"))
 head(merged_file)
 
 #note: number of rows should equal your shortest file length, drops taxonomy for OTUs that don't exist in your feature table
 
-#output merged .txt file
+#outputting merged .txt file
 write.table(merged_file, file = "combined_otu_tax.txt", sep = "\t", col.names = TRUE, row.names = FALSE)
 
 '''
@@ -121,25 +121,24 @@ metadata_full = read.table("metadata.tsv", sep = "\t", row.names =1, header = TR
 
 phy_tree = read_tree("tree.nwk")
 
-#import as phyloseq objects
+#importing as phyloseq objects
 OTU = otu_table(feat_table, taxa_are_rows = TRUE)
 TAX = tax_table(taxonomy)
 META = sample_data(metadata_full)
 #tree was already imported as phyloseq object
 
 
-#check that your OTU names are consistent across objects
+#checking that OTU names are consistent across objects
 head(taxa_names(TAX))
 head(taxa_names(OTU))
 head(taxa_names(phy_tree))
 
-#make sure files have same sample names
+#making sure files have same sample names
 sample_names(OTU)
 sample_names(META)
 
 
 ##now I can actually do phyloseq stuff!
-#https://joey711.github.io/phyloseq/import-data.html
 
 physeq = phyloseq(OTU, TAX, META, phy_tree)
 
