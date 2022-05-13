@@ -1,6 +1,5 @@
 # Microbial_Super_Team
 
-(Just general ideas so far)
 
 ## Background
 
