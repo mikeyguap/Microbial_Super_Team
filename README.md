@@ -18,18 +18,18 @@ Once in R, the phyloseq package was installed and the relevant files were merged
 
 The main takeaway of this comparison of the microbial comunity composition and abundance of the mud flats versus the oyster reefs was that the microbial communities were more similar to one another between the samples from the oyster reefs than the samples from the mud flats were to one anothe. This is visualized in figure 3 by the close clustering of the blue dots which represent the samples from the oyster reefs compared to the more spread out red dots from the mud flats. Because a Bray-Curtis plot is essentially a PCA, the closer the dots are in space the more similar they are to one another.
 
-Figure 1. quality plot showing the base call quality accross the forward and reverse reads
+Figure 1. quality plot showing the base call quality accross the forward and reverse reads. Made from Imported_Reads.qza file using qiime demux summerize command in Qiime2. Output was quality.qzv which was visualized using Qiime2View.
 ![plot](Figures/Quality_Plots.png)
 
-Figure 2. Taxa bar plot showing the relative abundencies of different phyla in the different samples
+Figure 2. Taxa bar plot showing the relative abundencies of different phyla in the different samples. made from table.qza and silva_taxonomy.qza using qiime taxa barplot command in Qiime2. Output was silva-taxa-bar-plots.qzv which was visualized using Qiime2View.
 ![plot](Figures/level-2-bars.png) 
 ![plot](Figures/level-2-legend.png)
 
-Figure 3. Bray-Curtis Emporer plot clustering the samples by community similarity. Each dot represents an independent sample, and samples are color coded by sampling location, with the samples taken from the oyster reefs shown in blue and the saples taken from the mud flats shown in red.
+Figure 3. Bray-Curtis Emporer plot clustering the samples by community similarity. Each dot represents an independent sample, and samples are color coded by sampling location, with the samples taken from the oyster reefs shown in blue and the saples taken from the mud flats shown in red. Made from rooted-tree.qza, table.qza, and metadata.tsv in the core diversity metrics step using the qiime diversity core command in Qiime2. Output was all of the core diversity metrics inclusing bray_curtis_emperor.qzv which was then visualized in Qiime2View.
 ![plot](Figures/emperor.png)
 ![plot](Figures/Emperor_Plot_Legend.png)
 
-Figure 4. Plot showing species richness by sampling location
+Figure 4. Plot showing species richness by sampling location. made from rich_w_meta whichwas a file created in R containing the species richness data and the metadata. Plot was created using the ggplot package in R.
 ![plot](Figures/species_richness_plot.png)
 
 ## References (If Any)
