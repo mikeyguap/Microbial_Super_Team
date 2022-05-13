@@ -138,7 +138,7 @@ sample_names(OTU)
 sample_names(META)
 
 
-##now I can actually do phyloseq stuff!
+##combining the objects to create the phyloseq object
 
 physeq = phyloseq(OTU, TAX, META, phy_tree)
 
