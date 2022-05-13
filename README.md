@@ -17,7 +17,6 @@ An issue that we ran into were identifying the correct pipeline to reach results
 
 To add a plot from the 'figs' folder, there needs to be a line in this document that looks like this:
 
-![plot](Figures/plotfile.png)
 ![plot](Figures/Quality_Plots.png)
 ![plot](Figures/level-2-bars.png) ![plot](Figures/level-2-legend.png)
 ![plot](Figures/emperor.png)
