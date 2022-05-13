@@ -22,7 +22,7 @@ To add a plot from the 'figs' folder, there needs to be a line in this document 
 ![plot](Figures/level-2-bars.png) ![plot](Figures/level-2-legend.png)
 ![plot](Figures/emperor.png)
 ![plot](Figures/Emperor_Plot_Legend.png)
-![plot](Figures/plotfile.png)
+![plot](Figures/species_richness_plot.png)
 
 ## References (If Any)
 Zheng, Z., Liao, Y., Ye, J., Yang, C., Adzigbli, L., Wang, Q., Du, X., &amp; Deng, Y. (2021, March 23). Microbiota diversity in Pearl Oyster Pinctada fucata martensii intestine and its aquaculture environment. Frontiers. Retrieved May 13, 2022, from https://www.frontiersin.org/articles/10.3389/fmars.2021.655698/full 
