@@ -15,10 +15,10 @@ An issue that we ran into were identifying the correct pipeline to reach results
 
 ## Findings
 
-To add a plot from the 'figs' folder, there needs to be a line in this document that looks like this:
-
+Figure 1. quality plot showing qualty of reads
 ![plot](Figures/Quality_Plots.png)
-![plot](Figures/level-2-bars.png) ![plot](Figures/level-2-legend.png)
+![plot](Figures/level-2-bars.png) 
+![plot](Figures/level-2-legend.png)
 ![plot](Figures/emperor.png)
 ![plot](Figures/Emperor_Plot_Legend.png)
 ![plot](Figures/species_richness_plot.png)
