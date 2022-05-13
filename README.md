@@ -4,7 +4,7 @@
 
 ## Background
 
-We were interested in identifying species compostion from Oyster Beds and Mud Flats (Great Bay, NH) and how their compostion of organisms differ within the same body of water. 
+Oysters are filter feeders, meaning they consume microorganisms by drawing water in over their gills and through beating cilia. The microbes are then digested as food for the oyster. Oysters' method of food consumption, therefore, brings into question the diversity of the microbial community of the environment in which they live. Does the presence of oysters decrease the diversity of microbes in the environment? Or do they simply decrease the amount of microbes present in the environment? To answer this, a study was conducted in the Great Bay, NH. Microbial samples were taken from two locations within the body of water: one from Oyster Beds (where oysters live), and the other from Mud Flats (where no oysters live). The samples were then sequenced and the species present identified. Based on research suggesting that the microbial diversity of the intestines of oysters was less than that of its surrounding water (Zheng et al., 2021), we hypothesized that the microbial diversity would be less in the samples from Oyster Beds than the microbial diversity in the samples from the Mud Flats.
 
 ## Methods
 
@@ -24,3 +24,4 @@ To add a plot from the 'figs' folder, there needs to be a line in this document 
 ![plot](Figures/Emperor_Plot_Legend.png)
 
 ## References (If Any)
+Zheng, Z., Liao, Y., Ye, J., Yang, C., Adzigbli, L., Wang, Q., Du, X., &amp; Deng, Y. (2021, March 23). Microbiota diversity in Pearl Oyster Pinctada fucata martensii intestine and its aquaculture environment. Frontiers. Retrieved May 13, 2022, from https://www.frontiersin.org/articles/10.3389/fmars.2021.655698/full 
