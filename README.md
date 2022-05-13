@@ -20,6 +20,7 @@ To add a plot from the 'figs' folder, there needs to be a line in this document 
 
 ![plot](Figures/plotfile.png)
 ![plot](Figures/Quality_Plots.png)
+![plot](Figures/level-2-bars.png)
 ![plot](Figures/emperor.png)
 ![plot](Figures/Emperor_Plot_Legend.png)
 
