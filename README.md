@@ -19,6 +19,6 @@ An issue that we ran into were identifying the correct pipeline to reach results
 To add a plot from the 'figs' folder, there needs to be a line in this document that looks like this:
 
 ![plot](figures/plotfile.png)
-![plot](figures/Screen Shot 2022-04-28 at 2.44.24 PM.png)
+![plot](Figures/Screen Shot 2022-04-28 at 2.44.24 PM.png)
 
 ## References (If Any)
