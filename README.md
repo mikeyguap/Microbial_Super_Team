@@ -16,6 +16,7 @@ Once in R, the phyloseq package was installed and the relevant files were merged
 
 ## Findings
 
+The main takeaway of this comparison of the microbial comunity composition and abundance of the mud flats versus the oyster reefs was that the microbial communities were more similar to one another between the samples from the oyster reefs than the samples from the mud flats were to one another. 
 Figure 1. quality plot showing the base call quality accross the forward and reverse reads
 ![plot](Figures/Quality_Plots.png)
 
