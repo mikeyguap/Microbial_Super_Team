@@ -21,9 +21,10 @@ Figure 2. Taxa bar plot showing the relative abundencies of different phyla in t
 ![plot](Figures/level-2-bars.png) 
 ![plot](Figures/level-2-legend.png)
 
-Figure 3. Bray-Curtis Emporer plot clustering the samples by community similarity. Each dot represents an independent sample and samples are color coded by sampling location, with the samples taken from the oyster reefs shown in blue and the saples taken from the mud flats shown in red.
+Figure 3. Bray-Curtis Emporer plot clustering the samples by community similarity. Each dot represents an independent sample, and samples are color coded by sampling location, with the samples taken from the oyster reefs shown in blue and the saples taken from the mud flats shown in red.
 ![plot](Figures/emperor.png)
 ![plot](Figures/Emperor_Plot_Legend.png)
+
 Figure 4. Plot showing species richness by sampling location
 ![plot](Figures/species_richness_plot.png)
 
