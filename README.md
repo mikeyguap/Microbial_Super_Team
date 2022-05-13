@@ -16,7 +16,8 @@ Once in R, the phyloseq package was installed and the relevant files were merged
 
 ## Findings
 
-The main takeaway of this comparison of the microbial comunity composition and abundance of the mud flats versus the oyster reefs was that the microbial communities were more similar to one another between the samples from the oyster reefs than the samples from the mud flats were to one another. 
+The main takeaway of this comparison of the microbial comunity composition and abundance of the mud flats versus the oyster reefs was that the microbial communities were more similar to one another between the samples from the oyster reefs than the samples from the mud flats were to one anothe. This is visualized in figure 3 by the close clustering of the blue dots which represent the samples from the oyster reefs compared to the more spread out red dots from the mud flats. Because a Bray-Curtis plot is essentially a PCA, the closer the dots are in space the more similar they are to one another.
+
 Figure 1. quality plot showing the base call quality accross the forward and reverse reads
 ![plot](Figures/Quality_Plots.png)
 
