@@ -42,7 +42,7 @@ qiime phylogeny align-to-tree-mafft-fasttree --i-sequences ./rep-seqs.qza --o-al
 # Core Diversity Metrics
 qiime diversity core-metrics-phylogenetic --i-phylogeny ./rooted-tree.qza --i-table ./table.qza --p-sampling-depth 2400 --m-metadata-file ./metadata.tsv --output-dir ./core-div-metrics
 
-# Visualize Tree
+# Visualize Tree (convert qza to nwk)
 qiime tools export --input-path rooted-tree.qza --output-path ./rooted-tree.nwk
 
 # Make Taxa Barplots 
