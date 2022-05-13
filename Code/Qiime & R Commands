@@ -110,15 +110,19 @@ feat_table$OYAPs051221b1<-as.numeric(feat_table$OYAPs051221b1)
 feat_table$OYAPs051221b2<-as.numeric(feat_table$OYAPs051221b2)
 feat_table$OYAPs051221b3<-as.numeric(feat_table$OYAPs051221b3)
 
-
+#converting feat_table to a matrix
 feat_table = as.matrix(feat_table)
 
-
+#importing split_tax file into R
 taxonomy = read.csv("split_tax.csv", sep = ",", row.names = 1)
+
+#converting taxonomy file to a matrix
 taxonomy = as.matrix(taxonomy)
 
+#importing the metadata file into R
 metadata_full = read.table("metadata.tsv", sep = "\t", row.names =1, header = TRUE)
 
+#importing the tree.nwk file into R
 phy_tree = read_tree("tree.nwk")
 
 #importing as phyloseq objects
