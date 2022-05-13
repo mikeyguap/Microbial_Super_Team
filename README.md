@@ -16,7 +16,7 @@ Once in R, the phyloseq package was installed and the relevant files were merged
 
 ## Findings
 
-Figure 1. quality plot showing qualty of reads
+Figure 1. quality plot showing the base call quality accross the forward and reverse reads
 ![plot](Figures/Quality_Plots.png)
 Figure 2. Taxa bar plot showing the relative abundencies of different phyla in the different samples
 ![plot](Figures/level-2-bars.png) 
