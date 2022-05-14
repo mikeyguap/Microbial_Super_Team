@@ -32,5 +32,5 @@ Figure 3. Bray-Curtis Emporer plot clustering the samples by community similarit
 Figure 4. Plot showing species richness by sampling location. made from rich_w_meta whichwas a file created in R containing the species richness data and the metadata. Plot was created using the ggplot package in R.
 ![plot](Figures/species_richness_plot.png)
 
-## References (If Any)
+## References
 Zheng, Z., Liao, Y., Ye, J., Yang, C., Adzigbli, L., Wang, Q., Du, X., &amp; Deng, Y. (2021, March 23). Microbiota diversity in Pearl Oyster Pinctada fucata martensii intestine and its aquaculture environment. Frontiers. Retrieved May 13, 2022, from https://www.frontiersin.org/articles/10.3389/fmars.2021.655698/full 
