@@ -5,6 +5,9 @@ qiime tools import \
 --input-path /Users/ellacaughran/gen711_lab/OneDrive_1_4-22-2022 \
 --output-path ./Imported_Reads.qza
 
+# quality visualization plots
+qiime demux summarize --i-data Imported_Reads.qza --o-visualization quality.qzv 
+
 # Run Imported_Reads.qza through dada2
 qiime dada2 denoise-paired \
 --i-demultiplexed-seqs Imported_Reads.qza \
@@ -16,9 +19,6 @@ qiime dada2 denoise-paired \
 --o-table dada2_table.qza \
 --o-representative-sequences dada2_rep_set.qza \
 --verbose
-
-# quality visualization plots
-qiime demux summarize --i-data Imported_Reads.qza --o-visualization quality.qzv 
 
 # Provides rarifaction table
 qiime feature-table summarize --i-table dada2_table.qza --o-visualization dada2_table.qzv
